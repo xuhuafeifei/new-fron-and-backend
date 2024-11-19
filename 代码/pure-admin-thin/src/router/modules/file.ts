@@ -38,6 +38,15 @@ export default {
         title: "图片2",
         showLink: VITE_HIDE_HOME === "true" ? false : true
       }
+    },
+    {
+      path: "/file2",
+      name: "testFile",
+      component: () => import("@/views/file/file.vue"),
+      meta: {
+        title: "文件aaa",
+        showLink: VITE_HIDE_HOME === "true" ? false : true
+      }
     }
   ]
 } as RouteConfigsTable;

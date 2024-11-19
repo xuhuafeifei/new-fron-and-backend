@@ -3,7 +3,7 @@ import { R, baseUrlApi } from "./utils";
 
 /** upload batch */
 export const uploadBatch = (data: FormData) => {
-  return http.request<R<any>>("post", baseUrlApi("common/file/uploadList"), {
+  return http.request<R<any>>("post", baseUrlApi("common/file2/uploadList"), {
     data,
     headers: {
       "Content-Type": "multipart/form-data"

@@ -29,6 +29,25 @@ export default {
         title: "富文本",
         showLink: VITE_HIDE_HOME === "true" ? false : true
       }
+    },
+    {
+      path: "/webrtc",
+      name: "webrtc",
+      component: () => import("@/views/welcome/webrtc.vue"),
+      meta: {
+        title: "webrtc",
+        showLink: VITE_HIDE_HOME === "true" ? false : true
+      }
+    },
+    {
+      path: "/course",
+      name: "webrtc",
+      component: () => import("@/views/welcome/CoursePage.vue"),
+      meta: {
+        title: "course",
+        showLink: VITE_HIDE_HOME === "true" ? false : true
+      }
     }
+
   ]
 } as RouteConfigsTable;

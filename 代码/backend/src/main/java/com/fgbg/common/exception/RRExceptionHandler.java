@@ -26,7 +26,7 @@ import javax.crypto.BadPaddingException;
  * @author Mark sunlightcs@gmail.com
  */
 @Slf4j
-@RestControllerAdvice
+//@RestControllerAdvice
 public class RRExceptionHandler {
 	private Logger logger = LoggerFactory.getLogger(getClass());
 
@@ -37,13 +37,14 @@ public class RRExceptionHandler {
 	@ExceptionHandler(RRException.class)
 	public R handleRRException(RRException e){
 		e.printStackTrace();
-		R r = new R();
-		r.put("code", e.getCode());
-		r.put("msg", e.getMessage());
+//		R r = new R();
+//		r.put("code", e.getCode());
+//		r.put("msg", e.getMessage());
 //		logger.info("开始打印信息:");
 //		log.info("code:{}", e.getCode());
 //		log.info("msg:{}", e.getMessage());
-		return r;
+//		return r;
+        return R.error(e.getCode(), e.getMessage());
 	}
 
 	@ExceptionHandler(NoHandlerFoundException.class)
